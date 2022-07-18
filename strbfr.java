@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class strbfr {
     public static void main(String[] args) {
        /* String sb1="Hell0";
@@ -21,8 +23,19 @@ public class strbfr {
         System.out.println(sb2);
         */
 
-        StringBuffer sb=new StringBuffer("I Keshava");
+        /*StringBuffer sb=new StringBuffer("I Keshava");
         sb.insert(2, "love ");
         System.out.println(sb); 
+        sb.append("...");
+        System.out.println(sb);*/
+
+        StringBuffer br=new StringBuffer("AVAHSEK");
+        StringBuffer s=new StringBuffer("");
+      /*  System.out.println("Enter the string:");
+        Scanner sc=new Scanner(System.in);
+        br=sc.next(pattern)*/
+        for(int i=br.length()-1,j=0;i>=0;i--,j++)
+        s.insert(j,br.charAt(i));
+        System.out.println(s);
     }
 }
