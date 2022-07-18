@@ -1,10 +1,10 @@
 public class method_overld {
     public static void main(String[] args) {
         double area;
-        float l=5,b=3;
-        double bb=3,hh=5;
+        float l=10,b=5;
+        double bb=10.5,hh=10.5;
         find_area ar=new find_area();
-        area=ar.area(l);
+        area=ar.area(10);
         System.out.println("Area of square of l,b = 5 is\t"+area);
         area=ar.area(l,b);
         System.out.println("Area of rectangle of l=2 and b=3 is:\t"+area);
