@@ -1,10 +1,10 @@
 class shape{
     private double height,width;
-  /*  shape(double h,double w){
+   shape(double h,double w){
         height = h;
         width = w;
         System.out.println("Im super cls");
-    }*/
+    }
     double getWidth(){
         return width;
     }
@@ -22,9 +22,9 @@ class shape{
     }
 }
 class triangle extends shape{
-    /*triangle(double h, double w) {
+    triangle(double h, double w) {
         super(h, w);
-    }*/
+    }
     String s;
     double area(){
         return getHeight()*getWidth()/2;
@@ -35,9 +35,9 @@ class triangle extends shape{
 }
 public class inherit_demo{
     public static void main(String[] args) {
-        triangle t1 = new triangle();
-        t1.setHeight(20);
-        t1.setWidth(20);
+        triangle t1 = new triangle(10,10);
+       // t1.setHeight(20);
+       // t1.setWidth(20);
         t1.print_sup();
         t1.print_sub();
         System.out.println("Area is "+t1.area() );
