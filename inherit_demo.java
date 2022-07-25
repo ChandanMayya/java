@@ -3,6 +3,7 @@ class shape{
     shape(){
         height = 20;
         width = 20;
+        System.out.println("Im super cls");
     }
     void print_sup(){
         System.out.println("Im in the super class: shape");
@@ -10,6 +11,11 @@ class shape{
 }
 class triangle extends shape{
     String s;
+    triangle(){
+        height=10;
+        width=10;
+        System.out.println("Im sub cls");
+    }
     double area(){
         return height*width/2;
     }
