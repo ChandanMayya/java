@@ -58,9 +58,13 @@ class account{
         balance += val;
     }
     void withdraw(double val){
-        if(balance<=500){
+      //  try{
+            if(balance-val<=500){
             System.out.println("LEss BALance");
-            return;
+           // throw Exception
+            //return;
+          //  }
+           // catch(Exception e){};
         }
         balance -= val;
     }
