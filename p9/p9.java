@@ -2,19 +2,23 @@ package p9;
 
 public class p9 {
     public static void main(String[] args) {
-        static_stack s1=new static_stack(10);
-        dynamic_stack d1=new dynamic_stack(5);
-        for(int i=0;i<15;i++){
-        s1.push('A');
+        stack_interface istack;
+        fixed_length_stack s1=new fixed_length_stack(10);
+        dynamic_length_stack d1=new dynamic_length_stack(5);
+        istack=s1;
+        for(int i=0;i<11;i++){
+            istack.push ((char)('A'+i));
+        } System.out.print("\n");
+        for(int i=0;i<11;i++){
+            System.out.print(istack.pop()+" ");
         }
-        for(int i=0;i<15;i++){
-            System.out.println(s1.pop());
+        System.out.print("\n");
+        istack=d1;
+        for(int i=0;i<26;i++){
+            istack.push((char)('A'+i));
         }
-        for(int i=0;i<15;i++){
-            d1.push('A');
-        }
-        for(int i=0;i<15;i++){
-            System.out.println(d1.pop());
+        for(int i=0;i<26;i++){
+            System.out.print(istack.pop()+" ");
         }
     }
 

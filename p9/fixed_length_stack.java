@@ -1,11 +1,11 @@
 package p9;
 
-public class static_stack implements stk_intrfc {
+public class fixed_length_stack implements stack_interface {
     
     private char[] data;
     private int top;
     
-    static_stack( int size){
+    fixed_length_stack( int size){
         data=new char[size];
         top=0;
     }

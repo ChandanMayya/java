@@ -1,10 +1,10 @@
 package p9;
 
-public class dynamic_stack implements stk_intrfc{
+public class dynamic_length_stack implements stack_interface{
     private char[] data;
     private int top;
 
-    dynamic_stack(int size){
+    dynamic_length_stack(int size){
         data=new char[size];
     }
 
