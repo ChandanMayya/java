@@ -33,8 +33,10 @@ public class p4 {
                     System.out.println("Enter the amount to withdraw:");
                     amt=sc.nextDouble();
                     a1.withdraw(amt);
+                    break;
                 case 3:
                     a1.display();
+                    break;
                 }
             System.out.println("Do you want to contine (true/false) ");
             opt=sc.nextBoolean();
@@ -56,9 +58,13 @@ class account{
         balance += val;
     }
     void withdraw(double val){
-        if(balance<=500){
+      //  try{
+            if(balance-val<=500){
             System.out.println("LEss BALance");
-            return;
+           // throw Exception
+            //return;
+          //  }
+           // catch(Exception e){};
         }
         balance -= val;
     }
