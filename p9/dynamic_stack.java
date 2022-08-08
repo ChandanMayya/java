@@ -4,13 +4,20 @@ public class dynamic_stack implements stk_intrfc{
     private char[] data;
     private int top;
 
+    dynamic_stack(int size){
+        data=new char[size];
+    }
+
     public void push(char ch){
-        if(isFull()){
-            System.out.println("Stack Full");
-            return;
+        if(top==data.length){
+            char[] temp=new char[data.length*2];
+            for(int i=0;i<data.length;i++){
+                temp[i]=data[i];
+            }
+            data=temp;
         }
-        top++;
         data[top]=ch;
+        top++;
     }
     public char pop(){
         if(isEmpty()){
@@ -24,6 +31,6 @@ public class dynamic_stack implements stk_intrfc{
         return top==0;
     }
     public boolean isFull(){
-        return top==data.length;
+        return false;
     }
 }
