@@ -17,7 +17,6 @@ public class static_stack implements stk_intrfc {
         }
         data[top]=ch;
         top++;
-        }
     }
     public char pop()
     {
