@@ -54,10 +54,24 @@ public class bank{
                         System.out.println("Invalid Account number..");
                     break;
                 case 3:
-                    ac[0].display();
+                    System.out.print("Enter the Account Number:");
+                    ano=sc.nextInt();
+                    flag=false;
+                    for(int i=0;i<ac.length;i++){
+                        if(ano==ac[i].ano){
+                            ac[i].display();
+                            flag=true;
+                            break;
+                        }else{
+                            flag=false;
+                        }
+                    }
+                    if(flag==false)
+                        System.out.println("Invalid Account number..");
                     break;
-                case 4:
-                    System.exit(0);
+                    case 4:
+                        System.out.println("\nThank You!\n");
+                        System.exit(0);
 
             }
         }
