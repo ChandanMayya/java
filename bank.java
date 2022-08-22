@@ -9,7 +9,7 @@ class LessBalanceException extends Exception{
 }
 class user{
     String name;
-    user(String name){-/
+    user(String name){
         this.name=name;
     }
     class account{
