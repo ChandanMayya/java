@@ -13,16 +13,17 @@ public class bank{
             ac[i]=new acnt(sc.nextInt());
             
         }  
-        System.out.println("_____MENU_____");
-        System.out.print("1.DEPOSIT\t2.WITHDRAW\n3.BALANCE4.EXIT");
-        switch(sc.nextInt()){
-            case 1:
+        while(true){
+            System.out.println("\n___________MENU___________");
+            System.out.print("1.DEPOSIT\t2.WITHDRAW\n3.BALANCE\t4.EXIT\nYour Choice:\t");
+            switch(sc.nextInt()){
+                case 1:
                     System.out.print("Enter the Account Number:");
                     ano=sc.nextInt();
                     flag=false;
                     for(int i=0;i<ac.length;i++){
                         if(ano==ac[i].ano){
-                            System.out.print("\nEnter the amount");
+                            System.out.print("Enter the amount");
                             amt=sc.nextDouble();
                             ac[i].deposit(amt);
                             flag=true;
@@ -34,13 +35,13 @@ public class bank{
                     if(flag==false)
                         System.out.println("Invalid Account number..");
                     break;
-            case 2:
+                case 2:
                     System.out.print("Enter the Account Number:");
                     ano=sc.nextInt();
                     flag=false;
                     for(int i=0;i<ac.length;i++){
                         if(ano==ac[i].ano){
-                            System.out.print("\nEnter the amount");
+                            System.out.print("Enter the amount");
                             amt=sc.nextDouble();
                             ac[i].withdraw(amt);
                             flag=true;
@@ -51,9 +52,14 @@ public class bank{
                     }
                     if(flag==false)
                         System.out.println("Invalid Account number..");
-            case 3:
-            case 4:ac[0].display();
+                    break;
+                case 3:
+                    ac[0].display();
+                    break;
+                case 4:
+                    System.exit(0);
 
+            }
         }
     }
 }
@@ -77,7 +83,15 @@ class acnt{
             System.out.println("Amount must be greater than zero..");
     }
     void withdraw(double amt){
-    
+    try{
+        if(this.balance-amt<500)
+            throw new LessBalanceException(amt);
+        else
+            this.balance-=amt;
+
+    }catch(LessBalanceException e){
+        return;
+    }
     }
 }
 
