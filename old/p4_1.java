@@ -1,6 +1,7 @@
+package old;
 import java.util.Scanner;
 
-public class p4 {
+public class p4_1 {
     public static void main(String[] args) {
         // account a1 = new account("KESHAVA", 50101123);
         // a1.display();
