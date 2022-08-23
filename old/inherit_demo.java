@@ -1,3 +1,4 @@
+package old;
 class shape{
     private double height,width;
    shape(double h,double w){
