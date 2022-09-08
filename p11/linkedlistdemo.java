@@ -1,6 +1,5 @@
 package p11;
 
-import java.rmi.Remote;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -27,11 +26,11 @@ public class linkedlistdemo {
         l1.removeFirstOccurrence('I');
         System.out.println("After Remove first occurance of I:\n"+l1);
         l1.addFirst('K');
-       // l1.addLast(' ');
+        l1.addLast(' ');
         l1.addLast('H');
         l1.addLast('e');
         System.out.println("After New Insertions:\n"+l1);
-        List<Character> l2=l1.subList(1,3);
+        List<Character> l2=l1.subList(4,6);
         System.out.println("New Sublist:\n"+l2);
         LinkedList<Character> ll2=new LinkedList<>(l2);
         l1.removeAll(ll2);
