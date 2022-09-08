@@ -5,7 +5,6 @@ public class pro_con {
         Q q=new Q();
         new Producer(q);
         new Consumer(q);
-        System.out.println("Press cntrl+c to stop");
     }
 }
 class Q{
@@ -18,7 +17,7 @@ class Q{
             }catch(InterruptedException e){
                 System.out.println("Interrupted");
             }
-        System.out.println("Got "+n);
+        System.out.println("Got: "+n);
         valueSet=false;
         notify();
         return n;
@@ -44,8 +43,7 @@ class Producer implements Runnable{
     }
 
     public void run() {
-        int i=0;
-        while(true)
+        for(int i=0;i<10;i++)
             q.put(i++);
     }
 }
